@@ -1,0 +1,156 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffc0cb, #ff70a6, #90caf9, #4fc3f7); /* Gradient background */
+    background-size: 400% 400%;
+    animation: colorfulGradient 12s ease infinite; /* Gradient animation */
+    color: #333;
+}
+
+@keyframes colorfulGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Expense Management Application Header */
+.expense-header {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.expense-header h1 {
+    color: #ff4081;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Bar */
+.nav-container {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff4081;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Available Financial Details Heading */
+h2.text-primary {
+    color: #ff4081;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: rainbowText 5s linear infinite;
+}
+
+@keyframes rainbowText {
+    0% {
+        color: #ff4081;
+    }
+    20% {
+        color: #ba68c8;
+    }
+    40% {
+        color: #3f51b5;
+    }
+    60% {
+        color: #03a9f4;
+    }
+    80% {
+        color: #00bcd4;
+    }
+    100% {
+        color: #ff4081;
+    }
+}
+
+/* Table Styling */
+.table-container {
+    width: 95%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #ffebee;
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+}
+
+/* No Data Found */
+h2[style="color:red"] {
+    color: #ff4081;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        margin-bottom: 10px;
+    }
+
+    .table-container {
+        width: 100%;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+}

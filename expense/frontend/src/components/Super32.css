@@ -1,0 +1,110 @@
+/* App Header - Uncommented and Enhanced */
+.expense-header {
+    background: linear-gradient(
+      to right,
+      #49c44f 0%,
+      #4caf50 25%,
+      #81c784 50%,
+      #4caf50 75%,
+      #19c622 100%
+    );
+    background-size: 200% 100%;
+    padding: 25px;
+    text-align: center;
+    margin: 15px auto 30px;
+    border-radius: 12px;
+    max-width: 95%;
+    box-shadow: 0 8px 20px rgba(204, 220, 25, 0.847), 0 0 15px rgba(32, 251, 229, 0.748) ;
+    animation: gradientFlow 5s ease infinite;
+    border-bottom: 3px solid rgba(157, 255, 0, 0.948);
+    position: relative;
+  }
+  
+  @keyframes gradientFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Animation for "AVAILABLE FINANCIAL DETAILS" heading */
+  @keyframes subheadingColorAnimation {
+    from {
+      color: #038f0c; /* Deep blue */
+      text-shadow: 0 0 10px rgba(4, 22, 50, 0.882);
+    }
+    to {
+      color: #00f140c9; /* Lighter blue */
+      text-shadow: 0 0 15px rgba(0, 81, 162, 0.877);
+    }
+  }
+  
+  /* Make sure the table header matches the design in the screenshots */
+  thead {
+    background-color: #1a1a1a;
+  }
+  
+  thead tr td {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    letter-spacing: 1px;
+  }
+  
+
+  /* Add this to your CSS file */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+  }
+  
+  /* Create a container for the blurred background image */
+  body::before {
+    content: "";
+    background-image: url("https://framerusercontent.com/images/Hx0jVLoC78ieQqE7TF5F1tzGRkk.png?scale-down-to=1024");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-attachment: fixed;
+    filter: blur(1px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3; /* Adjust opacity to control how faded the background appears */
+  }
+  
+  /* Ensure content remains visible over the blurred background */
+  .navContainer, .expense-header, table, h2.text-primary {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Make the header more visible with a semi-transparent background */
+  .expense-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    margin: 15px auto 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure table is readable with a white background */
+  table {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
